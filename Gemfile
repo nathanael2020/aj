@@ -48,3 +48,11 @@ gem 'spree_auth_devise', :github => 'spree/spree_auth_devise', :branch => '1-3-s
 gem 'spree_recently_viewed', :git => 'git://github.com/spree/spree_recently_viewed.git'
 gem "spree_product_zoom", :git => "git://github.com/spree/spree_product_zoom.git"
 gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git'
+
+group :development do
+  gem "capistrano",         require: false
+  gem 'capistrano-recipes', require: false
+  gem 'capistrano_colors',  require: false
+  gem "rvm-capistrano"
+  gem "quiet_assets", "~> 1.0.1"
+end

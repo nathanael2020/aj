@@ -1,25 +1,89 @@
-set :application, "set your application name here"
-set :repository,  "set your repository location here"
+require 'capistrano_colors'
+require "rvm/capistrano" # Rvm bootstrap
+require 'bundler/capistrano'
 
-# set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
-# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+task :production do
+  server "5.9.201.157", :app, :web, :db, :primary => true
 
-role :web, "your web-server here"                          # Your HTTP server, Apache/etc
-role :app, "your app-server here"                          # This may be the same as your `Web` server
-role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-role :db,  "your slave db-server here"
+  set :shared_host, "5.9.201.157"
+  set :application, "ariannejeannot"
+  set :deploy_to,   "/home/devmen/apps/#{application}/"
+  set :user, "devmen"
+  set :branch, "master"
+  set :rvm_ruby_string, "1.9.3@ariannejeannot"
+  set :rails_env, "production"
+end
 
-# if you want to clean up old releases on each deploy uncomment this:
-# after "deploy:restart", "deploy:cleanup"
 
-# if you're still using the script/reaper helper you will need
-# these http://github.com/rails/irs_process_scripts
+#default_run_options[:shell] = '/bin/bash'
+default_run_options[:pty] = true
 
-# If you are using Passenger mod_rails uncomment this:
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
+set :repository,  "git@devmen.unfuddle.com:devmen/ariannejeannot.git"
+set :scm, :git
+
+set :deploy_via,  :export
+set :keep_releases, 5
+
+set :use_sudo, false
+
+set :rvm_type, :user
+set :normalize_asset_timestamps, false
+
+after  "deploy",                 "deploy:cleanup"
+after  "deploy:finalize_update", "deploy:config", "deploy:update_uploads"
+after  "deploy:create_symlink",  "deploy:migrate",
+
+
+def run_remote_rake(rake_cmd)
+  rake_args = ENV['RAKE_ARGS'].to_s.split(',')
+  cmd = "cd #{fetch(:latest_release)} && #{fetch(:rake, "rake")} RAILS_ENV=#{fetch(:rails_env, "staging")} #{rake_cmd}"
+  cmd += "['#{rake_args.join("','")}']" unless rake_args.empty?
+  run cmd
+  set :rakefile, nil if exists?(:rakefile)
+end
+
+CONFIG_FILES = %w(database)
+
+namespace :deploy do
+  task :setup_config, :roles => :app do
+    run "mkdir -p #{shared_path}/config"
+    run "mkdir -p #{shared_path}/system"
+    run "mkdir -p #{shared_path}/spree"
+    CONFIG_FILES.each do |file|
+      put File.read("config/#{file}.example.yml"), "#{shared_path}/config/#{file}.yml"
+    end
+    puts "Now edit the config files in #{shared_path}"
+  end
+  after "deploy:setup", "deploy:setup_config"
+
+  before "deploy:cold", "deploy:install_bundler"
+  task :install_bundler, :roles => :app do
+    run "type -P bundle &>/dev/null || { gem install bundler --no-ri --no-rdoc; }"
+  end
+
+  task :config do
+    CONFIG_FILES.each do |file|
+      run "cd #{release_path}/config && ln -nfs #{shared_path}/config/#{file}.yml #{release_path}/config/#{file}.yml"
+    end
+  end
+
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+
+  task :update_uploads, :roles => [:app] do
+    run "ln -nfs #{deploy_to}#{shared_dir}/uploads #{release_path}/public/spree"
+    run "ln -nfs #{deploy_to}#{shared_dir}/system #{release_path}/public/system"
+  end
+
+end
+
+desc "Tail production log files"
+task :tail_logs, :roles => :app do
+  run "tail -f #{shared_path}/log/production.log" do |channel, stream, data|
+    trap ("INT") { puts "\nInterrupded"; exit 0; }
+    puts
+    puts "#{channel[:host]}: #{data}"
+    break if stream == :err
+  end
+end
