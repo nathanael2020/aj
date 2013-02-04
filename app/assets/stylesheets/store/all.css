@@ -642,10 +642,18 @@ li.nested-menu{
     position: relative;
     width: 300px;
 }
-ul.dropdown{
-background: red;
-    display: none;
-    position: absolute;
-    z-index: 99;
-}
+
 li:hover > ul{display: block;}
+ul.dropdown {
+background: red;
+display: none;
+position: absolute;
+top: 19px;
+z-index: 99;
+margin-top:-6px;
+}
+ul.dropdown li {
+display: block;
+height: 20px;
+margin: 10px;
+}
