@@ -1,0 +1,635 @@
+
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *
+
+ *= require store/spree_core
+ *= require store/spree_promo
+
+ *= require_self
+ *= require_tree .
+ *= require store/spree_reviews
+ *= require jquery.ui.all
+
+ *= require jquery-ui-1.9.2.custom
+ *= require jquery.bxslider
+ *= require icons
+ *= require icons-codes
+ *= require store/jquery.jqzoom
+ *= require store/spree_product_zoom
+*/
+
+@font-face {
+	font-family: 'Conv_ufonts.com_gillsans';
+	src: url('/assets/ufonts.com_gillsans.eot');
+	src: local('☺'), url('/assets/ufonts.com_gillsans.woff') format('woff'), url('/assets/ufonts.com_gillsans.ttf') format('truetype'), url('/assets/ufonts.com_gillsans.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+  font-family: 'Conv_ufonts.com_gillsans';
+  font-size: 12px;
+  font-weight: 400;
+  color: #2f0000;
+  line-height: 18px;
+  background-color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+
+color: #990000;
+}
+
+#add-to-cart-button{
+background-color: #8A1E00;
+border-width: 1px;
+border-color: #8A1E00;
+ }
+#add-to-cart-button:hover{
+background-color: #E31A23;
+border-width: 1px;
+border-color: #E31A23;
+ }
+
+#main-image {
+      text-align: center;
+      border: #919191;
+      background-color: #FFFFFF;
+      margin-bottom: 20px;
+
+}
+
+#header {
+
+	background-color: #E31A23;
+
+}
+
+#product-images {
+
+
+    #main-image {
+      text-align: center;
+      border: $default_border;
+      background-color: $product_background_color;
+      margin-bottom: 20px;
+
+      img {
+        min-height: 240px;
+        max-width: 100%;
+
+        /* Fluid images for product
+
+*/
+      }
+    }
+    #product-thumbnails {
+      li {
+        background-color: $product_background_color;
+      }
+    }
+
+  }
+
+
+  #tabs {
+	background: transparent;
+	border: none;
+}
+#tabs .ui-widget-header {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #c0c0c0;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+#tabs .ui-state-default {
+	background: transparent;
+	border: none;
+}
+#tabs .ui-state-active {
+	border: none;
+}
+#tabs .ui-state-default a {
+	color: #2f0000;
+}
+#tabs .ui-state-active a {
+	color: #990000;
+}
+#tabs .ui-state-hover a {
+	color: #E31A23!important;
+}
+
+#tabs .ui-widget {
+font-size: 12pt/*{fsDefault}
+ *= require store/spree_product_zoom
+*/;
+}
+
+.ui-tabs .ui-tabs-nav li {
+list-style: none;
+white-space: nowrap;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
+cursor: text;
+}
+
+.ui-helper-reset {
+line-height: 1.3;
+font-size: 100%;
+list-style: none;
+}
+
+.ui-tabs .ui-tabs-panel {
+display: block;
+border-width: 0;
+padding: 0.2em;
+background: none;
+}
+
+.ui-widget-content {
+border: 1px solid #aaaaaa/*{borderColorContent}
+ *= require store/spree_product_zoom
+*/;
+background: #ffffff/*{bgColorContent} *= require store/spree_fancy
+ *= require store/spree_product_zoom
+*/ url(images/ui-bg_flat_75_ffffff_40x100.png)/*{bgImgUrlContent}
+ *= require store/spree_product_zoom
+*/ 50%/*{bgContentXPos}
+ *= require store/spree_product_zoom
+*/ 50%/*{bgContentYPos}
+ *= require store/spree_product_zoom
+*/ repeat-x/*{bgContentRepeat}
+
+ *= require store/spree_product_zoom
+*/;
+color: #222222/*{fcContent} *
+ *= require store/spree_product_zoom
+*/;
+}
+
+.ui-tabs .ui-tabs-nav li {
+list-style: none;
+float: left;
+position: relative;
+top: 1px;
+margin: 0 .2em 1px 0;
+border-bottom: 0 !important;
+padding: 0;
+white-space: nowrap;
+}
+
+.ui-helper-clearfix {
+zoom: 1;
+}
+
+.ui-helper-reset {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+line-height: 1.3;
+text-decoration: none;
+font-size: 100%;
+list-style: none;
+}
+
+.ui-helper-clearfix::after {
+clear: both;
+}
+
+.ui-helper-clearfix::before, .ui-helper-clearfix::after {
+content: "";
+display: table;
+}
+
+.ui-tabs { position: relative; padding-right: .2em; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed")
+ *= require store/spree_product_zoom
+*/
+.ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0em 0em; }
+
+/*.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; } *= require store/spree_product_zoom
+*/
+
+.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; padding: 0; white-space: nowrap; }
+
+.ui-tabs .ui-tabs-nav li a { float: left; padding: .5em 3em .5em 0em; text-decoration: none; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere...
+
+ *= require store/spree_product_zoom
+*/
+.ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 1em 0em ; background: none; }
+.ui-tabs .ui-tabs-hide { display: none !important; }
+
+
+
+#reviews div.header {
+  font-size: 12pt;
+  font-weight: bold;
+  border-bottom: 1px #2222aa dashed;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#reviews div.review {
+  border-bottom: 1px #2222aa dashed;
+  margin-bottom: 10px;
+}
+
+#reviews div.review span.title {
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+#reviews div.review span.attribution {
+  font-size: 8pt;
+}
+
+.lit {
+  background-color: #aaaaaa;
+  color: #0000bb;
+  margin-right: 1px;
+  padding-left: 1px;
+}
+
+.unlit {
+  background-color: #aaaaaa;
+  color: #000000;
+  margin-right: 1px;
+  padding-left: 1px;
+}
+
+.star-rating-control {
+  display: inline-block;
+  height: 15px;
+}
+
+.review_hr {
+  size: 1px;
+  background: silver;
+  border: none;
+  margin: 1em 0;
+}
+
+/*
+ * jQuery.Rating Plugin CSS - http://www.fyneworks.com/jquery/star-rating/
+ **************************************************************************
+ *= require store/spree_product_zoom
+*/
+
+div.rating-cancel, div.star-rating {
+  float: left;
+  width: 17px;
+  height: 15px;
+  text-indent: -999em;
+  cursor: pointer;
+  display: block;
+  background: transparent;
+  overflow: hidden
+}
+
+div.rating-cancel, div.rating-cancel a {
+  background: transparent url("<%= asset_path('store/reviews/delete.gif') %>") no-repeat scroll 0 -16px;
+}
+
+div.star-rating, div.star-rating a {
+  background: url("<%= asset_path('store/reviews/star.gif') %>") no-repeat 0 0px;
+}
+
+div.rating-cancel a, div.star-rating a {
+  display: block;
+  width: 16px;
+  height: 100%;
+  background-position: 0 0px;
+  border: 0
+}
+
+div.star-rating-on, div.star-rating-on a {
+  background-position: 0 -30px !important
+}
+
+div.star-rating-hover, div.star-rating-hover a {
+  background-position: 0 -30px !important;
+}
+
+/* Read Only CSS
+
+ *= require store/spree_product_zoom
+*/
+div.star-rating-readonly a {
+  cursor: default !important
+}
+
+/* Partial Star CSS
+ *= require store/spree_product_zoom
+*/
+div.star-rating {
+/*
+This caused the review stars not to show up
+background-color: transparent !important;
+overflow: hidden !important
+ *= require store/spree_fancy
+ *= require store/spree_product_zoom
+*/
+}
+
+/* END jQuery.Rating Plugin CSS
+ *= require store/spree_product_zoom
+*/
+
+
+
+.progress-steps li {
+float: left;
+margin-right: 20px;
+font-weight: bold;
+text-transform: uppercase;
+padding: 5px 5px;
+color: #727276;
+}
+
+
+nav#taxonomies .taxons-list li a {
+font-size: 12px;
+}
+
+
+  table#cart-detail {
+    width: 100%;
+    tbody#line_items {
+      tr {
+
+        td[data-hook="cart_item_price"], td[data-hook="cart_item_total"] {
+          @extend span.price;
+          @extend span.price.selling;
+        }
+        td[data-hook="cart_item_quantity"] {
+          .line_item_quantity {
+            width: 20px;
+          }
+        }
+        td[data-hook="cart_item_delete"] {
+          .delete {
+            display: block;
+            width: 20px;
+          }
+        }
+      }
+    }
+
+  }
+
+
+
+  h6.product-section-title {
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(217, 217, 219, 1);
+      margin-bottom: 5px;
+
+    margin-top: 15px;
+  }
+
+   nav#taxonomies .taxonomy-root {
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(217, 217, 219, 1);
+      margin-bottom: 5px;
+
+    margin-top: 15px;
+  }
+
+  ul.taxons-list-1 {
+
+  }
+
+  ul.taxons-list-0 {
+   margin-left: 15px;
+  }
+
+  div.header-image {
+
+	/*background-image: url('http://localhost:3000/assets/store/header-fade.jpg'); *= require store/spree_product_zoom
+*/
+	margin:0px;
+
+  }
+
+  nav #main-nav-bar {
+text-transform: uppercase;
+font-weight: bold;
+margin-top: 10px;
+/*border-bottom: 1px solid #d9d9db; *= require store/spree_product_zoom
+*/
+border-bottom: none;
+padding-bottom: 6px;
+line-height: 0px;
+}
+
+#top-nav-bar a {
+
+	color: #ffffff;
+
+}
+
+
+#main-nav-bar a {
+
+	color: #220000;
+
+}
+
+
+#main-nav-bar a:link {
+
+	color: #FF0000;
+	-webkit-tap-highlight-color: #FF0000;
+
+}
+
+
+#main-nav-bar a:hover {
+
+	color: #FF0000;
+	-webkit-tap-highlight-color: #FF0000;
+
+}
+
+nav#taxonomies .taxonomy-root {
+text-transform: uppercase;
+border-bottom: 1px solid rgba(217, 217, 219, 1);
+margin-bottom: 5px;
+margin-top: 0px;
+}
+
+.container {
+position: relative;
+width: 960px;
+margin: 0 auto;
+padding: 0;
+background: transparent;
+}
+
+#header.row {
+margin-bottom: 0px;
+}
+
+#reviews div.review {
+  border-top: 1px rgb(217, 217, 219) solid;
+  border-bottom: none;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
+p.ratings-stars {
+display: block;
+-webkit-margin-before: 0em;
+-webkit-margin-after: 0em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+
+div.review {
+
+	margin-top: 15px;
+
+}
+
+.ratings, .ratings-stars {
+	line-height: 0;
+	padding-top: 5px;
+	padding-bottom: 0px;
+}
+
+#ratings .p {
+	padding-top: 5px;
+	padding-bottom: 0px;
+}
+
+a {
+
+	color: #55733c;
+}
+
+#cart-detail thead{
+background-color: #febe56;
+color: #2f0000;
+ }
+.cart-item-description h4 a{ color:#990000; }
+
+
+#clear_cart_link a.continue{
+background-color: #febe56;
+border-color: #febe56;
+ }
+#clear_cart_link a.continue:hover{
+background-color: #E31A23;
+border-color: #E31A23;
+ }
+
+#clear_cart_link button{
+background-color: #febe56;
+border-color: #febe56;
+ }
+#clear_cart_link button:hover{
+background-color: #E31A23;
+border-color: #E31A23;
+ }
+button#update-button{
+background-color: #8A1E00;
+ border-color: #8A1E00;
+ }
+button#update-button:hover{
+background-color: #E31A23;
+ border-color: #E31A23;
+ }
+
+button#checkout-link{
+background-color: #8A1E00;
+ border-color: #8A1E00;
+ }
+button#checkout-link:hover{
+background-color: #E31A23;
+ border-color: #E31A23;
+ }
+
+#a-wrap {
+    position:relative;
+    top:0px;
+    left:0px;
+    padding:0px;
+}
+
+#a-hover {
+    position:absolute;
+    top:-140px;
+    left:25px;
+    border-style:solid;
+    border-width:2px;
+    border-color:#4f0000;
+    text-align:center;
+    font-family: gill sans, arial;
+    display:none;
+    background:#FDBE56;
+    padding:10px;
+        color: black;
+        font-size: 10pt;
+        opacity:1;
+}
+
+
+#b-wrap {
+    position:relative;
+    top:0px;
+    left:0px;
+    padding:0px;
+}
+
+#b-hover {
+    position:absolute;
+    top:-140px;
+    left:285px;
+    border-style:solid;
+    border-width:2px;
+    border-color:#4f0000;
+    text-align:center;
+    font-family: gill sans, arial;
+    display:none;
+    background:#FDBE56;
+    padding:10px;
+        color: black;
+        font-size: 10pt;
+        opacity:1;
+}
+
+
+
+#c-wrap {
+    position:relative;
+    top:0px;
+    left:0px;
+    padding:0px;
+}
+
+#c-hover {
+    position:absolute;
+    top:-120px;
+    left:560px;
+    border-style:solid;
+    border-width:2px;
+    border-color:#4f0000;
+    text-align:center;
+    font-family: gill sans, arial;
+    display:none;
+    background:#FDBE56;
+    padding:10px;
+        color: black;
+        font-size: 10pt;
+        opacity:1;
+}
