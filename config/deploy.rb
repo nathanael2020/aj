@@ -30,7 +30,7 @@ set :normalize_asset_timestamps, false
 
 after  "deploy",                 "deploy:cleanup"
 after  "deploy:finalize_update", "deploy:config", "deploy:update_uploads"
-after  "deploy:create_symlink",  "deploy:migrate",
+# after  "deploy:create_symlink",  "deploy:migrate",
 
 
 def run_remote_rake(rake_cmd)
@@ -71,7 +71,7 @@ namespace :deploy do
   end
 
   task :update_uploads, :roles => [:app] do
-    run "ln -nfs #{deploy_to}#{shared_dir}/uploads #{release_path}/public/spree"
+    run "ln -nfs #{deploy_to}#{shared_dir}/spree #{release_path}/public/spree"
     run "ln -nfs #{deploy_to}#{shared_dir}/system #{release_path}/public/system"
   end
 

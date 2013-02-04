@@ -2,6 +2,16 @@
   <ul id="main-nav-bar" class="inline" data-hook>
     <li><%= link_to 'Press', root_path %></li>
     <li><%= link_to "Specials", "/products" %></li>
-    <li><%= link_to "Jewelry", "/products" %></li>
+    <li class="nested-menu">
+
+      <%= link_to "Jewelry", "#" %>
+
+        <ul class="dropdown">
+          <% jewelry_sub_categories.each do |item| %>
+          <li><%= link_to item.name, ""%></li>
+          <% end %>
+        </ul>
+
+    </li>
   </ul>
 </nav>
