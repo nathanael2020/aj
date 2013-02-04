@@ -65,3 +65,4 @@ $(document).ready(function() {
     });
 
 });
+//= require jquery.nivo.slider.pack.js

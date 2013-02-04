@@ -19,6 +19,11 @@
  *= require icons-codes
  *= require store/jquery.jqzoom
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
+
 */
 
 @font-face {
@@ -128,6 +133,10 @@ border-color: #E31A23;
 #tabs .ui-widget {
 font-size: 12pt/*{fsDefault}
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */;
 }
 
@@ -156,21 +165,49 @@ background: none;
 .ui-widget-content {
 border: 1px solid #aaaaaa/*{borderColorContent}
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */;
 background: #ffffff/*{bgColorContent} *= require store/spree_fancy
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */ url(images/ui-bg_flat_75_ffffff_40x100.png)/*{bgImgUrlContent}
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */ 50%/*{bgContentXPos}
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */ 50%/*{bgContentYPos}
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */ repeat-x/*{bgContentRepeat}
 
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */;
 color: #222222/*{fcContent} *
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */;
 }
 
@@ -211,10 +248,18 @@ display: table;
 
 .ui-tabs { position: relative; padding-right: .2em; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed")
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */
 .ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0em 0em; }
 
 /*.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; } *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */
 
 .ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; padding: 0; white-space: nowrap; }
@@ -225,6 +270,10 @@ display: table;
 .ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere...
 
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */
 .ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 1em 0em ; background: none; }
 .ui-tabs .ui-tabs-hide { display: none !important; }
@@ -283,6 +332,10 @@ display: table;
  * jQuery.Rating Plugin CSS - http://www.fyneworks.com/jquery/star-rating/
  **************************************************************************
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */
 
 div.rating-cancel, div.star-rating {
@@ -323,6 +376,10 @@ div.star-rating-hover, div.star-rating-hover a {
 /* Read Only CSS
 
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */
 div.star-rating-readonly a {
   cursor: default !important
@@ -330,6 +387,10 @@ div.star-rating-readonly a {
 
 /* Partial Star CSS
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */
 div.star-rating {
 /*
@@ -338,11 +399,19 @@ background-color: transparent !important;
 overflow: hidden !important
  *= require store/spree_fancy
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */
 }
 
 /* END jQuery.Rating Plugin CSS
  *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */
 
 
@@ -416,6 +485,10 @@ font-size: 12px;
   div.header-image {
 
 	/*background-image: url('http://localhost:3000/assets/store/header-fade.jpg'); *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */
 	margin:0px;
 
@@ -426,6 +499,10 @@ text-transform: uppercase;
 font-weight: bold;
 margin-top: 10px;
 /*border-bottom: 1px solid #d9d9db; *= require store/spree_product_zoom
+ *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
 */
 border-bottom: none;
 padding-bottom: 6px;
@@ -448,8 +525,16 @@ line-height: 0px;
 
 #main-nav-bar a:link {
 
-	/* color: #FF0000; */
-	/* -webkit-tap-highlight-color: #FF0000; */
+	/* color: #FF0000;  *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
+*/
+	/* -webkit-tap-highlight-color: #FF0000;  *= require themes/default/default
+ *= require themes/pascal/pascal
+ *= require themes/orman/orman
+ *= require nivo-slider
+*/
 
 }
 
@@ -533,31 +618,27 @@ background-color: #E31A23;
 border-color: #E31A23;
  }
 
-#clear_cart_link button{
-background-color: #febe56;
-border-color: #febe56;
- }
-#clear_cart_link button:hover{
-background-color: #E31A23;
-border-color: #E31A23;
- }
-button#update-button{
+button#update-button, button#checkout-link, #clear_cart_link button, [data-hook='login'] .primary,
+ #guest_checkout .primary, [data-hook='checkout_content'] .primary, #order a, .form-buttons .primary, .form-buttons .disabled.primary{
 background-color: #8A1E00;
  border-color: #8A1E00;
  }
-button#update-button:hover{
+button#update-button:hover, button#checkout-link:hover, #clear_cart_link button:hover,
+[data-hook='login'] .primary:hover, #guest_checkout .primary:hover, [data-hook='checkout_content'] .primary:hover, #order a:hover, .form-buttons .primary:hover, .form-buttons .disabled.primary:hover{
 background-color: #E31A23;
  border-color: #E31A23;
  }
 
-button#checkout-link{
+input[type="submit"], input[type="button"], input[type="reset"], button, a.button {
 background-color: #8A1E00;
  border-color: #8A1E00;
- }
-button#checkout-link:hover{
-background-color: #E31A23;
- border-color: #E31A23;
- }
+}
+
+
+input[type="button"]:hover, input[type="submit"]:hover, button:hover, .button:hover, a.button:hover, input[type="number"]:hover, input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, input[type="tel"]:hover, input[type="search"]:hover, textarea:hover {
+                                                                                                                                                                                                                                                                                          background-color: #E31A23 !important;
+                                                                                                                                                                                                                                                                                          border-color: #E31A23 !important;
+}
 
 #a-wrap {
     position:relative;
@@ -645,15 +726,56 @@ li.nested-menu{
 
 li:hover > ul{display: block;}
 ul.dropdown {
-background: red;
+background: #E31A23;
+
 display: none;
 position: absolute;
 top: 19px;
 z-index: 99;
 margin-top:-6px;
+padding-top: 10px;
 }
 ul.dropdown li {
 display: block;
 height: 20px;
 margin: 10px;
 }
+nav #main-nav-bar li ul li:first-child a {padding-left: 5px;}
+
+
+#existing-customer h3, #guest_checkout h3, #checkout-summary h3{
+color: #2f0000 !important;
+ }
+[data-hook='login'] a, [data-hook='login'] a:hover {
+                                                     color: #990000 !important;
+ }
+
+.progress-steps li.current-first, .progress-steps li.current {
+background-color: #E31A23;
+color: white;
+}
+.progress-steps li {
+                     color: #FFFFFF;
+}
+.progress-steps li.completed-first, .progress-steps li.completed {
+background-color: #8A1E00;
+color: white;
+}
+.progress-steps li.completed-first:hover, .progress-steps li.completed:hover {
+background-color: #8A1E00;
+color: white;
+}
+
+table.order-summary thead, thead#line-items{
+background-color: #febe56;
+color: #2f0000;
+
+ }
+
+.row.steps-data a{
+color: #990000;
+ }
+
+.account-summary h3, .account-my-orders h3{
+                       color: #2f0000 !important;
+ }
