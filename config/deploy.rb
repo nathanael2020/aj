@@ -2,17 +2,16 @@ require 'capistrano_colors'
 require "rvm/capistrano" # Rvm bootstrap
 require 'bundler/capistrano'
 
-task :production do
-  server "5.9.201.157", :app, :web, :db, :primary => true
+server "5.9.201.157", :app, :web, :db, :primary => true
 
-  set :shared_host, "5.9.201.157"
-  set :application, "ariannejeannot"
-  set :deploy_to,   "/home/devmen/apps/#{application}/"
-  set :user, "devmen"
-  set :branch, "master"
-  set :rvm_ruby_string, "1.9.3@ariannejeannot"
-  set :rails_env, "production"
-end
+set :shared_host, "5.9.201.157"
+set :application, "ariannejeannot"
+set :deploy_to,   "/home/devmen/apps/#{application}/"
+set :user, "devmen"
+set :branch, "master"
+set :rvm_ruby_string, "1.9.3@ariannejeannot"
+set :rails_env, "production"
+
 
 
 #default_run_options[:shell] = '/bin/bash'
