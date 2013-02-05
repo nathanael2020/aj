@@ -830,3 +830,21 @@ color: #990000;
 footer#footer, footer#footer a, footer#footer h5 {
 color: white !important;
 }
+
+/* Featured in Table */
+table.featured_in_table{
+margin:10px;
+border:none;
+border-radius: 5px;
+box-shadow:2px 2px 3px 1px #cccccc;
+font-family: 'Conv_ufonts.com_gillsans';
+color: #777777;
+ vertical-align:middle;
+ }
+.featured_title{
+font-family: 'Conv_ufonts.com_gillsans';
+color: #777777;
+ vertical-align:middle;
+font-size: 20px;
+ }
+/* End Featured in Table */
