@@ -24,6 +24,7 @@
  *= require themes/orman/orman
  *= require nivo-slider
 
+ *= require store/spree_custom_assets
 */
 
 @font-face {
@@ -106,6 +107,7 @@ border-color: #E31A23;
 
         /* Fluid images for product
 
+ *= require store/spree_custom_assets
 */
       }
     }
@@ -154,6 +156,7 @@ font-size: 12pt/*{fsDefault}
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */;
 }
 
@@ -186,6 +189,7 @@ border: 1px solid #aaaaaa/*{borderColorContent}
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */;
 background: #ffffff/*{bgColorContent} *= require store/spree_fancy
  *= require store/spree_product_zoom
@@ -193,24 +197,28 @@ background: #ffffff/*{bgColorContent} *= require store/spree_fancy
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */ url(images/ui-bg_flat_75_ffffff_40x100.png)/*{bgImgUrlContent}
  *= require store/spree_product_zoom
  *= require themes/default/default
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */ 50%/*{bgContentXPos}
  *= require store/spree_product_zoom
  *= require themes/default/default
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */ 50%/*{bgContentYPos}
  *= require store/spree_product_zoom
  *= require themes/default/default
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */ repeat-x/*{bgContentRepeat}
 
  *= require store/spree_product_zoom
@@ -218,6 +226,7 @@ background: #ffffff/*{bgColorContent} *= require store/spree_fancy
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */;
 color: #222222/*{fcContent} *
  *= require store/spree_product_zoom
@@ -225,6 +234,7 @@ color: #222222/*{fcContent} *
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */;
 }
 
@@ -269,6 +279,7 @@ display: table;
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */
 .ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0em 0em; }
 
@@ -277,6 +288,7 @@ display: table;
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */
 
 .ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; padding: 0; white-space: nowrap; }
@@ -291,6 +303,7 @@ display: table;
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */
 .ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 1em 0em ; background: none; }
 .ui-tabs .ui-tabs-hide { display: none !important; }
@@ -353,6 +366,7 @@ display: table;
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */
 
 div.rating-cancel, div.star-rating {
@@ -397,6 +411,7 @@ div.star-rating-hover, div.star-rating-hover a {
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */
 div.star-rating-readonly a {
   cursor: default !important
@@ -408,6 +423,7 @@ div.star-rating-readonly a {
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */
 div.star-rating {
 /*
@@ -420,6 +436,7 @@ overflow: hidden !important
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */
 }
 
@@ -429,6 +446,7 @@ overflow: hidden !important
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */
 
 
@@ -506,6 +524,7 @@ font-size: 12px;
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */
 	margin:0px;
 
@@ -520,6 +539,7 @@ margin-top: 10px;
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */
 border-bottom: none;
 padding-bottom: 6px;
@@ -550,22 +570,28 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */
 	/* -webkit-tap-highlight-color: #FF0000;  *= require themes/default/default
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
+ *= require store/spree_custom_assets
 */
 
 }
 
 
-/* #main-nav-bar a:hover { */
+/* #main-nav-bar a:hover {  *= require store/spree_custom_assets
+*/
 
-/* 	color: #FF0000  !important; */
-/* 	-webkit-tap-highlight-color: #FF0000  !important; */
+/* 	color: #FF0000  !important;  *= require store/spree_custom_assets
+*/
+/* 	-webkit-tap-highlight-color: #FF0000  !important;  *= require store/spree_custom_assets
+*/
 
-/* } */
+/* }  *= require store/spree_custom_assets
+*/
 
 nav#taxonomies .taxonomy-root {
 text-transform: uppercase;

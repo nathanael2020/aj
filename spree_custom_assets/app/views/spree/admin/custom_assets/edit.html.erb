@@ -1,0 +1,10 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<h1>Editing Slide</h1>
+
+<%= render 'spree/shared/error_messages', :target => @custom_asset %>
+
+<%= form_for [:admin, @custom_asset], :html => { :multipart => true } do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
+<% end %>

@@ -52,7 +52,7 @@ gem 'spree_recently_viewed', :git => 'git://github.com/spree/spree_recently_view
 gem "spree_product_zoom", :git => "git://github.com/spree/spree_product_zoom.git"
 gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git'
 gem 'spree_slider'
-
+gem "spree_custom_assets", :path => "./spree_custom_assets"
 group :development do
   gem "capistrano",         require: false
   gem 'capistrano-recipes', require: false
