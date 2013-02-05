@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130204165913) do
+ActiveRecord::Schema.define(:version => 20130205061435) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -92,6 +92,20 @@ ActiveRecord::Schema.define(:version => 20130204165913) do
     t.datetime "updated_at",      :null => false
   end
 
+  create_table "spree_collection_sliders", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "spree_collection_slides", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "spree_configurations", :force => true do |t|
     t.string   "name"
     t.string   "type",       :limit => 50
@@ -166,6 +180,40 @@ ActiveRecord::Schema.define(:version => 20130204165913) do
   add_index "spree_inventory_units", ["order_id"], :name => "index_inventory_units_on_order_id"
   add_index "spree_inventory_units", ["shipment_id"], :name => "index_inventory_units_on_shipment_id"
   add_index "spree_inventory_units", ["variant_id"], :name => "index_inventory_units_on_variant_id"
+
+  create_table "spree_item_sliders", :force => true do |t|
+    t.integer  "spree_collection_slider_id"
+    t.string   "name"
+    t.text     "body"
+    t.string   "link_url"
+    t.boolean  "published"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.string   "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "position",                   :default => 0, :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
+  end
+
+  add_index "spree_item_sliders", ["spree_collection_slider_id"], :name => "index_spree_item_sliders_on_spree_collection_slider_id"
+
+  create_table "spree_item_slides", :force => true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.string   "link_url"
+    t.boolean  "published"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.string   "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "position",                  :default => 0, :null => false
+    t.integer  "spree_collection_slide_id"
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
+  end
+
+  add_index "spree_item_slides", ["spree_collection_slide_id"], :name => "index_spree_item_slides_on_spree_collection_slide_id"
 
   create_table "spree_line_items", :force => true do |t|
     t.integer  "variant_id"
