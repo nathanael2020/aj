@@ -1,5 +1,5 @@
 <!-- insert_bottom "[data-hook='admin_configurations_menu']" -->
 <tr>
-  <td><%= link_to 'Spree Slider', admin_slides_path %></td>
-  <td>Manage Spree Slider contents</td>
+  <td><%= link_to 'Custom Assets', admin_custom_assets_path %></td>
+  <td>Manage Custom Assets</td>
 </tr>
