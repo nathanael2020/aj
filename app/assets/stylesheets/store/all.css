@@ -682,7 +682,7 @@ background-color: #8A1E00;
 }
 
 
-input[type="button"]:hover, input[type="submit"]:hover, button:hover, .button:hover, a.button:hover, input[type="number"]:hover, input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, input[type="tel"]:hover, input[type="search"]:hover, textarea:hover {
+input[type="button"]:hover, input[type="submit"]:hover, button:hover, .button:hover, a.button:hover,  {
                                                                                                                                                                                                                                                                                           background-color: #E31A23 !important;
                                                                                                                                                                                                                                                                                           border-color: #E31A23 !important;
 }
