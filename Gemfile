@@ -40,7 +40,7 @@ gem 'jquery-ui-rails', "~> 2.0.2"
 # To use debugger
 # gem 'debugger'
 
-gem 'spree_reviews', :git => 'git://github.com/spree/spree_reviews.git'
+#gem 'spree_reviews', :git => 'git://github.com/spree/spree_reviews.git'
 
 gem 'spree', '1.3.1'
 #gem 'spree', '1.3', :path => '../spree'

@@ -11,7 +11,6 @@
 //= require store/spree_core
 //= require store/spree_promo
 
-//= require jquery.rating
 //= require store/jquery.jqzoom-core
 //= require store/spree_product_zoom
 //= require jquery.nivo.slider.js

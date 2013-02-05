@@ -1,3 +1,3 @@
 Spree::TaxonsController.class_eval do
-  helper Spree::ReviewsHelper
+  # helper Spree::ReviewsHelper
 end
