@@ -22,6 +22,7 @@
         <div id="content" class="%>" data-hook>
           <%= flash_messages %>
           <%= yield %>
+          <%= render "shared/jewelry_thumbnails" %>
           <%= render "spree/shared/slider" if current_page?('/') %>
         </div>
 

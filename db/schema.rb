@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130205093904) do
+ActiveRecord::Schema.define(:version => 20130205140705) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -607,6 +607,23 @@ ActiveRecord::Schema.define(:version => 20130205093904) do
     t.string   "name"
     t.boolean  "show_rate_in_label",                               :default => true
   end
+
+  create_table "spree_taxon_images", :force => true do |t|
+    t.string   "name"
+    t.integer  "taxon_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "icon_file_name"
+    t.string   "icon_content_type"
+    t.integer  "icon_file_size"
+    t.datetime "icon_updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "spree_taxon_images", ["taxon_id"], :name => "index_spree_taxon_images_on_taxon_id"
 
   create_table "spree_taxonomies", :force => true do |t|
     t.string   "name",                      :null => false

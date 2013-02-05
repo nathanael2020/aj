@@ -1,0 +1,2 @@
+<!-- insert_bottom "[data-hook='buttons']" -->
+<%= button_link_to 'images', admin_taxonomy_taxon_taxon_images_url(@taxonomy, @taxon) %>

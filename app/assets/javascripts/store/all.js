@@ -66,3 +66,4 @@ $(document).ready(function() {
 
 });
 //= require store/spree_custom_assets
+//= require store/spree_taxon_images

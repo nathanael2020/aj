@@ -8,7 +8,7 @@
 
         <ul class="dropdown">
           <% jewelry_sub_categories.each do |item| %>
-          <li><%= link_to item.name, item.name.downcase.gsub(/ |\/|\./, '_') %></li>
+          <li><%= link_to item.name, item.name_to_link %></li>
           <% end %>
         </ul>
 

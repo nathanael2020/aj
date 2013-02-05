@@ -53,6 +53,8 @@ gem "spree_product_zoom", :git => "git://github.com/spree/spree_product_zoom.git
 gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git'
 gem 'spree_slider'
 gem "spree_custom_assets", :path => "./spree_custom_assets"
+gem "spree_taxon_images", :path => "./spree_taxon_images"
+
 group :development do
   gem "capistrano",         require: false
   gem 'capistrano-recipes', require: false

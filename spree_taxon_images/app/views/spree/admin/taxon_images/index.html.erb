@@ -1,0 +1,38 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<div class="toolbar" data-hook="toolbar">
+  <ul class="actions">
+    <li>
+      <p><%= button_link_to 'New Images', new_admin_taxonomy_taxon_taxon_image_url(@taxonomy, @taxon), :icon => 'add', :id => 'admin_new_asset_link' %></p>
+    </li>
+  </ul>
+  <br class="clear" />
+</div>
+
+<h1>Images</h1>
+
+<table class="index" id="listing_slides" data-hook>
+  <thead>
+    <tr data-hook="admin_slides_index_headers">
+      <th>Name</th>
+      <th data-hook="admin_slides_index_header_position">URL</th>
+      <th data-hook="admin_slides_index_header_actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @taxon_images.each do |item|%>
+      <tr id="<%= dom_id item %>" data-hook="admin_assets_index_rows">
+        <td width="150px" ><%= item.name %></td>
+        <td data-hook="admin_slides_index_position">
+          image: <%= item.image.try(:url) %>
+          <br />
+          icon: <%= item.icon.try(:url) %>
+        </td>
+        <td data-hook="admin_slides_index_row_actions">
+          <%= link_to "edit", edit_admin_taxonomy_taxon_taxon_image_path(@taxonomy, @taxon, item), :class => 'edit' %> &nbsp;
+          <%= link_to "delete", admin_taxonomy_taxon_taxon_image_path(@taxonomy, @taxon, item), :method => :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

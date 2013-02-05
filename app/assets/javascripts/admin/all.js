@@ -12,3 +12,4 @@
 
 //= require_tree .
 //= require admin/spree_custom_assets
+//= require admin/spree_taxon_images

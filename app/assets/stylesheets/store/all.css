@@ -25,6 +25,7 @@
  *= require nivo-slider
 
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 
 @font-face {
@@ -108,6 +109,7 @@ border-color: #E31A23;
         /* Fluid images for product
 
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
       }
     }
@@ -157,6 +159,7 @@ font-size: 12pt/*{fsDefault}
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */;
 }
 
@@ -190,6 +193,7 @@ border: 1px solid #aaaaaa/*{borderColorContent}
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */;
 background: #ffffff/*{bgColorContent} *= require store/spree_fancy
  *= require store/spree_product_zoom
@@ -198,6 +202,7 @@ background: #ffffff/*{bgColorContent} *= require store/spree_fancy
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */ url(images/ui-bg_flat_75_ffffff_40x100.png)/*{bgImgUrlContent}
  *= require store/spree_product_zoom
  *= require themes/default/default
@@ -205,6 +210,7 @@ background: #ffffff/*{bgColorContent} *= require store/spree_fancy
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */ 50%/*{bgContentXPos}
  *= require store/spree_product_zoom
  *= require themes/default/default
@@ -212,6 +218,7 @@ background: #ffffff/*{bgColorContent} *= require store/spree_fancy
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */ 50%/*{bgContentYPos}
  *= require store/spree_product_zoom
  *= require themes/default/default
@@ -219,6 +226,7 @@ background: #ffffff/*{bgColorContent} *= require store/spree_fancy
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */ repeat-x/*{bgContentRepeat}
 
  *= require store/spree_product_zoom
@@ -227,6 +235,7 @@ background: #ffffff/*{bgColorContent} *= require store/spree_fancy
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */;
 color: #222222/*{fcContent} *
  *= require store/spree_product_zoom
@@ -235,6 +244,7 @@ color: #222222/*{fcContent} *
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */;
 }
 
@@ -280,6 +290,7 @@ display: table;
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 .ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0em 0em; }
 
@@ -289,6 +300,7 @@ display: table;
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 
 .ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; padding: 0; white-space: nowrap; }
@@ -304,6 +316,7 @@ display: table;
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 .ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 1em 0em ; background: none; }
 .ui-tabs .ui-tabs-hide { display: none !important; }
@@ -367,6 +380,7 @@ display: table;
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 
 div.rating-cancel, div.star-rating {
@@ -412,6 +426,7 @@ div.star-rating-hover, div.star-rating-hover a {
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 div.star-rating-readonly a {
   cursor: default !important
@@ -424,6 +439,7 @@ div.star-rating-readonly a {
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 div.star-rating {
 /*
@@ -437,6 +453,7 @@ overflow: hidden !important
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 }
 
@@ -447,6 +464,7 @@ overflow: hidden !important
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 
 
@@ -525,6 +543,7 @@ font-size: 12px;
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 	margin:0px;
 
@@ -540,6 +559,7 @@ margin-top: 10px;
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 border-bottom: none;
 padding-bottom: 6px;
@@ -571,26 +591,32 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 	/* -webkit-tap-highlight-color: #FF0000;  *= require themes/default/default
  *= require themes/pascal/pascal
  *= require themes/orman/orman
  *= require nivo-slider
  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 
 }
 
 
 /* #main-nav-bar a:hover {  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 
 /* 	color: #FF0000  !important;  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 /* 	-webkit-tap-highlight-color: #FF0000  !important;  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 
 /* }  *= require store/spree_custom_assets
+ *= require store/spree_taxon_images
 */
 
 nav#taxonomies .taxonomy-root {
@@ -831,7 +857,8 @@ footer#footer, footer#footer a, footer#footer h5 {
 color: white !important;
 }
 
-/* Featured in Table */
+/* Featured in Table  *= require store/spree_taxon_images
+*/
 table.featured_in_table{
 margin:10px;
 border:none;
@@ -847,4 +874,22 @@ color: #777777;
  vertical-align:middle;
 font-size: 20px;
  }
-/* End Featured in Table */
+/* End Featured in Table  *= require store/spree_taxon_images
+*/
+
+
+ul.jewelry_thumbnails{
+list-style-type: none;
+overflow: hidden;
+ }
+li.item_jewelry_thumbnails{
+background: red;
+float: left;
+height: 47px;
+list-style: none outside none;
+padding: 5px;
+
+ }
+
+ li.item_jewelry_thumbnails img{opacity: 0.8;}
+li.item_jewelry_thumbnails  img:hover{opacity: 1;}

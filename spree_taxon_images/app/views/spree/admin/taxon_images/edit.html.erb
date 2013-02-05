@@ -1,0 +1,14 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<h1>Editing Image</h1>
+
+<%= render 'spree/shared/error_messages', :target => @taxon_image %>
+
+<%= form_for [:admin, @taxonomy, @taxon, @taxon_image] , :html => { :multipart => true } do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <div class="form-buttons filter-actions actions" data-hook="buttons">
+   <%= button t(:update), 'icon-refresh' %>
+   <span class="or"><%= t(:or) %></span>
+   <%= button_link_to t(:cancel), admin_taxonomy_taxon_taxon_images_path(@taxonomy, @taxon), :icon => 'icon-remove' %>
+ </div>
+<% end %>

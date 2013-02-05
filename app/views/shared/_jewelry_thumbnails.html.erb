@@ -1,0 +1,11 @@
+<% if list_jewelry_thumbnails.size > 0 %>
+<div>
+  <ul class="jewelry_thumbnails">
+    <%  list_jewelry_thumbnails.each do |taxon| %>
+    <% taxon.taxon_images.select{|j| j.icon.present? }.each do |image| %>
+    <li class="item_jewelry_thumbnails"><%= link_to image_tag(image.icon), taxon.name_to_link %></li>
+    <% end %>
+    <% end %>
+  </ul>
+</div>
+<% end %>

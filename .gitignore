@@ -77,4 +77,4 @@ db/backups/*
 
 # docs
 /docs/api/*
-public/spree/products*
+public/spree/*
