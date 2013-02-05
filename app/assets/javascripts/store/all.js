@@ -14,6 +14,7 @@
 //= require jquery.rating
 //= require store/jquery.jqzoom-core
 //= require store/spree_product_zoom
+//= require jquery.nivo.slider.pack.js
 
 $(document).ready(function() {
 
@@ -65,4 +66,3 @@ $(document).ready(function() {
     });
 
 });
-//= require jquery.nivo.slider.pack.js
