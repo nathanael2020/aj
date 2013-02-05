@@ -43,12 +43,29 @@ body {
   background-color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
 }
-
+#main-nav-bar a {
+color: #200 !important;
+}
 a {
 
-color: #990000;
+color: #990000 !important;
 }
 
+#main-nav-bar a:hover, a:hover {
+  color: #990000 !important;
+}
+
+ul#products li a.info {
+height: inherit;
+font-weight: 400;
+color: #E31A23 !important;
+}
+ul#products li .price {
+color: #E31A23 !important;
+font-size: 16px;
+padding-top: 5px;
+display: block;
+}
 #add-to-cart-button{
 background-color: #8A1E00;
 border-width: 1px;
@@ -511,17 +528,21 @@ line-height: 0px;
 
 #top-nav-bar a {
 
-	color: #ffffff;
+	color: #ffffff !important;
 
 }
 
 
 #main-nav-bar a {
 
-	color: #220000;
+	color: #220000  !important;
 
 }
 
+span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total {
+  font-weight: bold;
+  color: #220000 !important;
+}
 
 #main-nav-bar a:link {
 
@@ -539,12 +560,12 @@ line-height: 0px;
 }
 
 
-#main-nav-bar a:hover {
+/* #main-nav-bar a:hover { */
 
-	color: #FF0000;
-	-webkit-tap-highlight-color: #FF0000;
+/* 	color: #FF0000  !important; */
+/* 	-webkit-tap-highlight-color: #FF0000  !important; */
 
-}
+/* } */
 
 nav#taxonomies .taxonomy-root {
 text-transform: uppercase;
@@ -779,3 +800,7 @@ color: #990000;
 .account-summary h3, .account-my-orders h3{
                        color: #2f0000 !important;
  }
+
+footer#footer, footer#footer a, footer#footer h5 {
+color: white !important;
+}
