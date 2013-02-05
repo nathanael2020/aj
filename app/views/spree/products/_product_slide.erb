@@ -1,7 +1,7 @@
 <div class="slider-wrapper theme-default product-slide">
   <div class="ribbon"></div>
   <div id="product_slider" class="nivoSlider">
-    <% Spree::Product.limit(5).each do |product| %>
+    <% Spree::Product.where("spree_products.id != ?", @product.id).limit(5).each do |product| %>
     <%= link_to product_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
     <% end %>
   </div>

@@ -804,7 +804,7 @@ background: #E31A23;
 display: none;
 position: absolute;
 top: 19px;
-z-index: 99;
+z-index: 9999;
 margin-top:-6px;
 padding-top: 10px;
 }
@@ -832,19 +832,23 @@ color: white;
 }
 .progress-steps li.completed-first, .progress-steps li.completed {
 background-color: #8A1E00;
-color: white;
+     color: white !important;
 }
 .progress-steps li.completed-first:hover, .progress-steps li.completed:hover {
 background-color: #8A1E00;
-color: white;
+color: white !important;
 }
-
+.progress-steps li.completed-first a, .progress-steps li.completed a {
+ color: white !important;
+}
 table.order-summary thead, thead#line-items{
 background-color: #febe56;
 color: #2f0000;
 
  }
-
+.flash.notice, .notice.errorExplanation {
+ background-color: #8A1E00 !important;
+}
 .row.steps-data a{
 color: #990000;
  }
@@ -905,3 +909,7 @@ li.item_jewelry_thumbnails  img:hover{opacity: 1;}
   }
 
 /* end Slide on product page */
+
+#billing legend, #shipping legend, #shipping_method legend, #payment legend, #order_details legend, #order_summary legend {
+color: #2f0000;
+}
