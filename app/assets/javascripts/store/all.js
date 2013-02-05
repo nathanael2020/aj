@@ -16,6 +16,9 @@
 //= require jquery.nivo.slider.js
 
 $(document).ready(function() {
+    if ($('#product_slider').length > 0){
+      $('#product_slider').nivoSlider();
+    };
 
 	$('.jqzoom').jqzoom({
             zoomType: 'standard',
@@ -65,5 +68,3 @@ $(document).ready(function() {
     });
 
 });
-//= require store/spree_custom_assets
-//= require store/spree_taxon_images

@@ -893,3 +893,15 @@ padding: 5px;
 
  li.item_jewelry_thumbnails img{opacity: 0.8;}
 li.item_jewelry_thumbnails  img:hover{opacity: 1;}
+
+/* Slide on product page */
+  .product-slide.theme-default #product_slider {
+  margin:0 auto 0 auto;
+  width:418px; /* Make sure your images are the same size */
+  height:246px; /* Make sure your images are the same size */
+  }
+  .slider-wrapper {
+  margin:0 auto 50px auto;
+  }
+
+/* end Slide on product page */
