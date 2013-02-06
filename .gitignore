@@ -40,7 +40,7 @@ tmp/*
 /public/cache
 /public/stylesheets/compiled
 /public/system
-/public/spree
+/public
 /spec/tmp/*
 /cache
 /capybara*
