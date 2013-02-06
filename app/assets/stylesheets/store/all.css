@@ -901,6 +901,7 @@ li.item_jewelry_thumbnails  img:hover{opacity: 1;}
 /* Slide on product page */
   .product-slide.theme-default #product_slider {
   margin:0 auto 0 auto;
+  margin-top: 30px;
   width:418px; /* Make sure your images are the same size */
   height:246px; /* Make sure your images are the same size */
   }
@@ -913,3 +914,9 @@ li.item_jewelry_thumbnails  img:hover{opacity: 1;}
 #billing legend, #shipping legend, #shipping_method legend, #payment legend, #order_details legend, #order_summary legend {
 color: #2f0000;
 }
+.product-slide .nivo-caption {
+bottom: 100.01%;
+top: -30px;
+left: -2px;
+width: 101%;
+   }
