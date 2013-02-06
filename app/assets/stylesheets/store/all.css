@@ -887,11 +887,11 @@ list-style-type: none;
 overflow: hidden;
  }
 li.item_jewelry_thumbnails{
-background: red;
-float: left;
+background: #590E00;
+float: center;
 height: 47px;
 list-style: none outside none;
-padding: 5px;
+padding: 10px;
 
  }
 
