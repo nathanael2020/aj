@@ -1,6 +1,6 @@
 module Spree
   module BaseHelper
-
+    include Rails.application.routes.url_helpers
     # Defined because Rails' current_page? helper is not working when Spree is mounted at root.
     def current_spree_page?(url)
       path = request.fullpath.gsub(/^\/\//, '/')
