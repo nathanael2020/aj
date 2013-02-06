@@ -22,11 +22,16 @@
   <tbody>
     <% @taxon_images.each do |item|%>
       <tr id="<%= dom_id item %>" data-hook="admin_assets_index_rows">
-        <td width="150px" ><%= item.name %></td>
-        <td data-hook="admin_slides_index_position">
-          image: <%= item.image.try(:url) %>
+        <td width="150px" >
+          <%= item.name %>
           <br />
-          icon: <%= item.icon.try(:url) %>
+          <%= image_tag item.icon.try(:url) %>
+
+        </td>
+        <td data-hook="admin_slides_index_position">
+           <%= image_tag item.image.try(:url), :height => "75" %>
+                     <br />
+          image: <%= item.image.try(:url) %>
         </td>
         <td data-hook="admin_slides_index_row_actions">
           <%= link_to "edit", edit_admin_taxonomy_taxon_taxon_image_path(@taxonomy, @taxon, item), :class => 'edit' %> &nbsp;
