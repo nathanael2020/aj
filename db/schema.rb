@@ -92,13 +92,6 @@ ActiveRecord::Schema.define(:version => 20130205140705) do
     t.datetime "updated_at",      :null => false
   end
 
-  create_table "spree_collection_sliders", :force => true do |t|
-    t.string   "name"
-    t.string   "url"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "spree_collection_slides", :force => true do |t|
     t.string   "name"
     t.string   "url"
@@ -153,12 +146,11 @@ ActiveRecord::Schema.define(:version => 20130205140705) do
 
   create_table "spree_feedback_reviews", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "review_id",                    :null => false
+    t.integer  "review_id",                 :null => false
     t.integer  "rating",     :default => 0
     t.text     "comment"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
-    t.string   "locale",     :default => "en"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   add_index "spree_feedback_reviews", ["review_id"], :name => "index_feedback_reviews_on_review_id"
@@ -190,23 +182,6 @@ ActiveRecord::Schema.define(:version => 20130205140705) do
   add_index "spree_inventory_units", ["order_id"], :name => "index_inventory_units_on_order_id"
   add_index "spree_inventory_units", ["shipment_id"], :name => "index_inventory_units_on_shipment_id"
   add_index "spree_inventory_units", ["variant_id"], :name => "index_inventory_units_on_variant_id"
-
-  create_table "spree_item_sliders", :force => true do |t|
-    t.integer  "spree_collection_slider_id"
-    t.string   "name"
-    t.text     "body"
-    t.string   "link_url"
-    t.boolean  "published"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.string   "image_file_size"
-    t.datetime "image_updated_at"
-    t.integer  "position",                   :default => 0, :null => false
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
-  end
-
-  add_index "spree_item_sliders", ["spree_collection_slider_id"], :name => "index_spree_item_sliders_on_spree_collection_slider_id"
 
   create_table "spree_item_slides", :force => true do |t|
     t.string   "name"
@@ -497,7 +472,6 @@ ActiveRecord::Schema.define(:version => 20130205140705) do
     t.datetime "updated_at",                    :null => false
     t.integer  "user_id"
     t.string   "ip_address"
-    t.string   "locale",     :default => "en"
   end
 
   create_table "spree_roles", :force => true do |t|
