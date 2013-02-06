@@ -1,4 +1,5 @@
 class TaxonPagesController < Spree::StoreController
+  helper Spree::BaseHelper
   def show
 
     if jewelry = Spree::Taxon.find_by_name("Jewelry")
