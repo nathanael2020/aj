@@ -1,0 +1,20 @@
+
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *common
+  database: aj2_development
+  username: nathanael
+
+test:
+  <<: *common
+  database: aj2_test
+  username: nathanael
+
+production:
+  <<: *common
+  database: aj2_production
+  username: nathanael
