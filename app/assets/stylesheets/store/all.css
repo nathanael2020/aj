@@ -888,7 +888,7 @@ overflow: hidden;
  }
 li.item_jewelry_thumbnails{
 background: #590E00;
-float: center;
+float: left;
 height: 47px;
 list-style: none outside none;
 padding: 10px;
