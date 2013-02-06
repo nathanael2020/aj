@@ -14,3 +14,4 @@ end
 Spree.user_class = "Spree::User"
 
 Spree::Config.set(logo: "logo.png")
+require "#{Rails.root}/lib/taxon_page_constraints"

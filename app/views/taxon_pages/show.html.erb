@@ -1,0 +1,31 @@
+ <style type="text/css">
+  .theme-default #slider {
+      margin:0 auto 0 auto;
+      width:618px; /* Make sure your images are the same size */
+      height:246px; /* Make sure your images are the same size */
+  }
+  .slider-wrapper {
+      margin:0 auto 50px auto;
+  }
+  </style>
+
+  <div class="slider-wrapper theme-default">
+    <div class="ribbon"></div>
+    <div id="slider" class="nivoSlider">
+      <% @start_slide = 0 %>
+      <% @taxon_page.taxon_images.select{|j| j.image.present? }.each_with_index do |item, i| %>
+      <% @start_slide = i if params[:slide].present? && item.id == params[:slide].to_i %>
+      <a href="#">
+        <%= image_tag item.image.url %>
+      </a>
+
+      <% end %>
+    </div>
+
+    </div>
+
+  <script type="text/javascript">
+  $(window).load(function() {
+      $('#slider').nivoSlider({startSlide: <%= @start_slide %>});
+  });
+  </script>
