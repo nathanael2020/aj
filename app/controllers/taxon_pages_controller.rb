@@ -5,7 +5,7 @@ class TaxonPagesController < Spree::StoreController
       @taxon_page = jewelry.children.detect{ |j| j.name_to_link == params[:taxon_name] }
     end
     unless @taxon_page
-      redirect_to root_path and return
+      redirect_to '/' and return
     end
 
     render :layout => "spree_application"
