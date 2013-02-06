@@ -1,4 +1,4 @@
-class TaxonPagesController < Spree::StoreController
+class Spree::TaxonPagesController < Spree::StoreController
   helper Spree::BaseHelper
   def show
 
