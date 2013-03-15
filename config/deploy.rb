@@ -1,12 +1,18 @@
+require "bundler/capistrano"
+load "deploy/assets"
 
 server "184.106.81.10", :app, :web, :db, :primary => true
 
-set :application, "aj_spree"
-set :repository,  "git://github.com/nathanael2020/aj_spree.git"
+set :application, "aj"
+set :repository,  "git://github.com/nathanael2020/aj.git"
 
+set :scm, :git
 
-set :user, "nathanael"
-set :group, "staff"
+set :user, "spree"
+
+set :deploy_to, "/home/spree/#{application}"
+
+set :use_sudo, false
 
 #set :branch, "master"
 #set :rvm_ruby_string, "1.9.3@ariannejeannot"
@@ -14,39 +20,13 @@ set :group, "staff"
 
 
 
-#default_run_options[:shell] = '/bin/bash'
-default_run_options[:pty] = true
+default_run_options[:shell] = '/bin/bash --login'
 
-namespace :deploy do
-  task :setup_config, :roles => :app do
-    run "mkdir -p #{shared_path}/config"
-    run "mkdir -p #{shared_path}/system"
-    run "mkdir -p #{shared_path}/spree"
-    CONFIG_FILES.each do |file|
-      put File.read("config/#{file}.example.yml"), "#{shared_path}/config/#{file}.yml"
-    end
-    puts "Now edit the config files in #{shared_path}"
-  end
-  after "deploy:setup", "deploy:setup_config"
+default_environment["RAILS_ENV"] = 'production'
 
-  before "deploy:cold", "deploy:install_bundler"
-  task :install_bundler, :roles => :app do
-    run "type -P bundle &>/dev/null || { gem install bundler --no-ri --no-rdoc; }"
-  end
-
-  task :config do
-    CONFIG_FILES.each do |file|
-      run "cd #{release_path}/config && ln -nfs #{shared_path}/config/#{file}.yml #{release_path}/config/#{file}.yml"
-    end
-  end
-
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-  end
-
-  task :update_uploads, :roles => [:app] do
-    run "ln -nfs #{deploy_to}#{shared_dir}/spree #{release_path}/public/spree"
-    run "ln -nfs #{deploy_to}#{shared_dir}/system #{release_path}/public/system"
-  end
-
+task :symlink_database_yml do
+  run "rm #{release_path}/config/database.yml"
+  run "ln -sfn #{shared_path}/config/database.yml 
+       #{release_path}/config/database.yml"
 end
+after "bundle:install", "symlink_database_yml"
